@@ -1,0 +1,133 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="800"
+        Height="600"
+        x:Class="GetStartedApp.MainWindow"
+        Title="GetStartedApp"
+	    CanResize="False">
+	<Window.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Margin" Value="2"></Setter>
+			<Setter Property="Foreground" Value="Black"></Setter>
+			<Setter Property="FontWeight" Value="Medium"></Setter>
+		</Style>
+		<Style Selector="DockPanel TextBlock">
+			<Setter Property="Margin" Value="8"></Setter>
+		</Style>
+		<Style Selector="ScrollViewer StackPanel">
+			<Setter Property="Margin" Value="12"></Setter>
+		</Style>
+		<Style Selector="Image">
+			<Setter Property="Margin" Value="25"></Setter>
+		</Style>
+		<Style Selector="ScrollViewer TextBlock:pointerover">
+			<Setter Property="Foreground" Value="Blue"></Setter>
+		</Style>
+		
+	</Window.Styles>
+	<Grid ShowGridLines="False"
+        RowDefinitions="auto,*,auto"
+        ColumnDefinitions="3*,*">
+		<Line StartPoint="0, 33" EndPoint="800, 33" Stroke="Black" StrokeThickness="3"/>
+		<Line StartPoint="0, 5" EndPoint="800, 5" Stroke="Black" StrokeThickness="3"/>
+		<!-- Background="#0F0F2D"> -->
+
+		<DockPanel Grid.Row="0"
+				   Grid.Column="0"
+				   Grid.ColumnSpan="2"
+				   Background="White">
+			<TextBlock>Home</TextBlock>
+			<TextBlock>About</TextBlock>
+			<TextBlock>Blog's main topic 1</TextBlock>
+			<TextBlock>Blog's main topic 2</TextBlock>
+			<TextBlock>Blog's main topic 3</TextBlock>
+			<TextBlock>Associated blogs</TextBlock>
+			<TextBlock DockPanel.Dock="Right"
+					   TextAlignment="Right">
+				RSS
+			</TextBlock>
+		</DockPanel>
+
+
+		<ScrollViewer Grid.Row="1"
+					  Grid.Column="0">
+			<StackPanel Orientation="Vertical"
+						Background="White">
+
+				<StackPanel Background="White">
+					<TextBlock TextAlignment="Left"
+							   FontFamily="Times New Roman"
+							   FontSize="15"
+							   Margin="0">
+						Article 1
+					</TextBlock>
+				</StackPanel>
+
+
+				<StackPanel Orientation="Vertical"
+							Background="White">
+					<TextBlock TextWrapping="WrapWithOverflow">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan, est eget bibendum viverra, nibh justo vestibulum purus, ut luctus ligula felis at magna. Fusce vel consequat magna. Duis porta vestibulum odio, non mattis leo elementum in. Nullam interdum pellentesque mi, nec dictum lorem elementum eget. Morbi metus augue, ornare ut odio non, condimentum vulputate ipsum. Sed facilisis nunc justo, quis rhoncus ligula tristique vitae. Fusce nec lobortis massa. Nullam eu cursus massa. Aenean nec iaculis tortor. Sed porttitor tellus a mauris tempor consequat. Mauris rutrum euismod tellus, sit amet condimentum elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ac ex purus. Integer vulputate lobortis mollis. Praesent commodo convallis porttitor.
+					</TextBlock>
+					<Image Source="resm:Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png?assembly=Avalonia.Skia"
+						   Height="200"
+						   Width="200"
+						   Stretch="Uniform"
+						   HorizontalAlignment="Center"></Image>
+				</StackPanel>
+
+			</StackPanel>
+		</ScrollViewer>
+		<ScrollViewer Grid.Row="1"
+					  Grid.Column="1">
+			<StackPanel Orientation="Vertical"
+						Background="White">
+
+				<StackPanel Background="White">
+					<TextBlock TextAlignment="Left"
+							   FontFamily="Times New Roman"
+							   FontSize="15"
+							   Margin="0">
+					</TextBlock>
+				</StackPanel>
+
+
+				<StackPanel Orientation="Vertical"
+							Background="White">
+					<TextBlock TextWrapping="WrapWithOverflow">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan, est eget bibendum viverra, nibh justo vestibulum purus, ut luctus ligula felis at magna. Fusce vel consequat magn...
+					</TextBlock>
+					<TextBlock TextAlignment="Right">
+						More
+					</TextBlock>
+					<TextBlock TextAlignment="Right">
+						Yesterday
+					</TextBlock>
+
+					<TextBlock TextWrapping="WrapWithOverflow">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan, est eget bibendum viverra, nibh justo vestibulum purus, ut luctus ligula felis at magna. Fusce vel consequat magn...
+					</TextBlock>
+					<TextBlock TextAlignment="Right">
+						More
+					</TextBlock>
+					<TextBlock TextAlignment="Right">
+						1 week ago
+					</TextBlock>
+						
+					
+				</StackPanel>
+				
+			</StackPanel>
+		</ScrollViewer>
+		<DockPanel Grid.Row="2"
+				   Grid.ColumnSpan="2"
+				   Background="White">
+			<TextBlock DockPanel.Dock="Left">Tags: Tag1 Tag2 Tag3 Tag4</TextBlock>
+			<TextBlock DockPanel.Dock="Right" TextAlignment="Center">Rate this article: 4/5</TextBlock>
+		</DockPanel>
+		
+	</Grid>
+</Window>
